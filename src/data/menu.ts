@@ -325,8 +325,8 @@ export const menuItems: MenuItem[] = [
   // ═══════════════════════════════════════════
   {
     id: "chopp-brahma-caneco",
-    name: "Chopp Brahma Caneco",
-    description: "Chopp Brahma servido no caneco.",
+    name: "Chopp Brahma Caneco 400 ml",
+    description: "Chopp Brahma servido no caneco de 400 ml.",
     price: "R$ 17,00",
     category: "chopes",
     image: menuImg("chopp-caneco-pro.jpg"),
@@ -335,8 +335,8 @@ export const menuItems: MenuItem[] = [
   },
   {
     id: "chopp-brahma-caldereta",
-    name: "Chopp Brahma Caldereta",
-    description: "Chopp Brahma servido na caldereta.",
+    name: "Chopp Brahma Caldereta 300 ml",
+    description: "Chopp Brahma servido na caldereta de 300 ml.",
     price: "R$ 15,00",
     category: "chopes",
     image: menuImg("chopp-caldereta-pro.jpg"),
