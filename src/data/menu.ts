@@ -18,6 +18,8 @@ export interface MenuItem {
   name: string;
   description: string;
   price: string;
+  /** Observação ao lado do preço (ex.: por unidade). */
+  priceNote?: string;
   category: Exclude<MenuCategory, "todos">;
   image: string;
   tags?: MenuTag[];
@@ -53,6 +55,7 @@ export const menuItems: MenuItem[] = [
     name: "Pastel Carne / Queijo",
     description: "Pastel frito na hora — escolha carne ou queijo.",
     price: "R$ 8,00",
+    priceNote: "Por unidade",
     category: "petiscos",
     image: menuImg("pastel-pro.jpg"),
     tags: ["mais-pedido"],
@@ -62,7 +65,7 @@ export const menuItems: MenuItem[] = [
     id: "batata-frita",
     name: "Batata Frita",
     description: "Porção generosa de batata frita crocante.",
-    price: "R$ 29,90",
+    price: "R$ 39,90",
     category: "petiscos",
     image: menuImg("batata-frita-pro.jpg"),
     tags: ["para-compartilhar"],
@@ -83,7 +86,7 @@ export const menuItems: MenuItem[] = [
     name: "Iscas de Frango à Milanesa",
     description:
       "Porção de iscas de frango empanadas, servidas com molhos da casa e limão.",
-    price: "R$ 49,90",
+    price: "R$ 59,90",
     category: "petiscos",
     image: menuImg("iscas-frango-pro.jpg"),
     tags: ["mais-pedido", "para-compartilhar"],
@@ -102,8 +105,9 @@ export const menuItems: MenuItem[] = [
   },
   {
     id: "camarao-empanado",
-    name: "Camarão Empanado",
-    description: "Porção de camarão empanado crocante, servido com limão e molho.",
+    name: "Camarão na Farinha Panko",
+    description:
+      "Porção de camarão empanado na farinha panko, servido com limão e molho.",
     price: "R$ 59,90",
     category: "petiscos",
     image: menuImg("camarao-empanado-pro.jpg"),

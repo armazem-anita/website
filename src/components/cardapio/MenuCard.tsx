@@ -42,8 +42,13 @@ export function MenuCard({ item, compact = false }: MenuCardProps) {
         <p className="mt-1 line-clamp-2 text-sm text-anita-gray">
           {item.description}
         </p>
-        <p className="mt-2 font-display text-xl tracking-wide text-anita-orange uppercase">
-          {item.price}
+        <p className="mt-2 flex flex-wrap items-baseline gap-x-2 gap-y-0.5 font-display text-xl tracking-wide text-anita-orange uppercase">
+          <span>{item.price}</span>
+          {item.priceNote ? (
+            <span className="font-sans text-xs font-semibold tracking-wide text-anita-gray normal-case">
+              {item.priceNote}
+            </span>
+          ) : null}
         </p>
       </div>
     </article>

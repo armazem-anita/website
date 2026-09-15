@@ -38,8 +38,13 @@ export function Destaques() {
                   {item.name}
                 </h3>
                 <p className="mt-2 text-sm text-white/70">{item.description}</p>
-                <p className="mt-3 font-display text-2xl text-anita-orange uppercase">
-                  {item.price}
+                <p className="mt-3 flex flex-wrap items-baseline gap-x-2 gap-y-0.5 font-display text-2xl text-anita-orange uppercase">
+                  <span>{item.price}</span>
+                  {item.priceNote ? (
+                    <span className="font-sans text-xs font-semibold tracking-wide text-white/70 normal-case">
+                      {item.priceNote}
+                    </span>
+                  ) : null}
                 </p>
               </div>
             </div>
