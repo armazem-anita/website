@@ -1,0 +1,53 @@
+{
+  "leadId": "armazem-anita",
+  "name": "Armazém Anita",
+  "positioning": "Ponto de encontro familiar do bairro: churrasquinho, chope e música ao vivo — armazém gaúcho de esquina, não bar de avenida.",
+  "mood": "armazem-familiar",
+  "voice": ["acolhedor", "familiar", "gaúcho sem clichê forçado", "mesa cheia", "de bairro"],
+  "avoid": ["boate", "neon", "luxo", "roxo tech", "editorial frio"],
+  "colors": {
+    "background": "#F3E6D4",
+    "foreground": "#2C2118",
+    "brand": "#1F5C3A",
+    "accent": "#C45C26",
+    "surface": "#FFF8EE",
+    "muted": "#A08968"
+  },
+  "typography": {
+    "display": "Serifada robusta com leve peso de madeira/placa",
+    "body": "Sans humanista para cardápio e horários",
+    "rationale": "Verde de armazém + laranja de brasa no accent; fundo papel/algodão quente. Nome ‘Armazém’ pede tipografia de placa, não script de café hipster."
+  },
+  "imagery": {
+    "heroSubject": "Churrasquinho na grelha ou fachada da Buenos Aires 373 com movimento de família",
+    "atmosphere": [
+      "madeira e rua",
+      "brasa / espeto",
+      "chope na mesa",
+      "música ao vivo no fim de semana",
+      "clima diurno até happy hour"
+    ],
+    "references": [
+      {
+        "label": "Instagram @armazemanitaoficial",
+        "url": "https://www.instagram.com/armazemanitaoficial/"
+      },
+      {
+        "label": "Restaurant Guru",
+        "url": "https://www.restaurantguru.com.br/Armazem-Anita-Porto-Alegre"
+      }
+    ]
+  },
+  "ui": {
+    "radius": "mixed",
+    "density": "airy",
+    "heroStyle": "full-bleed"
+  },
+  "evidence": [
+    "Bio do Instagram cita trevo e endereço de bairro — verde entra como cor de marca, não como ‘eco tech’.",
+    "Ofício público: churrasquinho + família + música ao vivo → accent de brasa/laranja e fundo claro diurno (abre de manhã).",
+    "Duas unidades com mesma marca: site precisa parecer ‘casa’ e hub, não landing genérica de delivery."
+  ],
+  "confidence": 0.68,
+  "researchedAt": "2026-09-02"
+}

@@ -1,0 +1,116 @@
+@import "tailwindcss";
+
+:root {
+  --anita-orange: #ff5500;
+  --anita-orange-dark: #e04a00;
+  --anita-black: #0d0d0d;
+  --anita-cream: #f7f2ea;
+  --anita-cream-dark: #ebe4d8;
+  --anita-white: #ffffff;
+  --anita-gray: #6b6b6b;
+  --anita-gray-light: #a3a3a3;
+}
+
+@theme inline {
+  --color-anita-orange: var(--anita-orange);
+  --color-anita-orange-dark: var(--anita-orange-dark);
+  --color-anita-black: var(--anita-black);
+  --color-anita-cream: var(--anita-cream);
+  --color-anita-cream-dark: var(--anita-cream-dark);
+  --color-anita-gray: var(--anita-gray);
+  --color-anita-gray-light: var(--anita-gray-light);
+  --font-display: var(--font-bebas);
+  --font-body: var(--font-dm-sans);
+  --font-family-display: var(--font-bebas), system-ui, sans-serif;
+  --font-family-body: var(--font-dm-sans), system-ui, sans-serif;
+}
+
+.font-display {
+  font-family: var(--font-bebas), system-ui, sans-serif;
+}
+
+.font-body {
+  font-family: var(--font-dm-sans), system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--anita-cream);
+  color: var(--anita-black);
+  font-family: var(--font-dm-sans), system-ui, sans-serif;
+}
+
+::selection {
+  background: var(--anita-orange);
+  color: white;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.6s ease-out forwards;
+}
+
+.torn-edge {
+  position: relative;
+}
+
+.torn-edge::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 24px;
+  background: var(--anita-cream);
+  clip-path: polygon(
+    0% 0%,
+    3% 100%,
+    7% 0%,
+    11% 100%,
+    15% 0%,
+    19% 100%,
+    23% 0%,
+    27% 100%,
+    31% 0%,
+    35% 100%,
+    39% 0%,
+    43% 100%,
+    47% 0%,
+    51% 100%,
+    55% 0%,
+    59% 100%,
+    63% 0%,
+    67% 100%,
+    71% 0%,
+    75% 100%,
+    79% 0%,
+    83% 100%,
+    87% 0%,
+    91% 100%,
+    95% 0%,
+    100% 100%,
+    100% 0%
+  );
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
