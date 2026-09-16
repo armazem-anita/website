@@ -104,17 +104,6 @@ export const menuItems: MenuItem[] = [
     isReal: true,
   },
   {
-    id: "camarao-empanado",
-    name: "Camarão na Farinha Panko",
-    description:
-      "Porção de camarão empanado na farinha panko, servido com limão e molho.",
-    price: "R$ 59,90",
-    category: "petiscos",
-    image: menuImg("camarao-empanado-pro.jpg"),
-    tags: ["especial-casa", "para-compartilhar"],
-    isReal: true,
-  },
-  {
     id: "picado-anita",
     name: "Picado Anita",
     description:

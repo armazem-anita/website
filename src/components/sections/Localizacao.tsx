@@ -1,6 +1,9 @@
-import Image from "next/image";
-import { business, openingHours, openingHoursNote } from "@/data/business";
-import { images } from "@/data/images";
+import {
+  business,
+  locations,
+  openingHours,
+  openingHoursNote,
+} from "@/data/business";
 import { Button } from "@/components/ui/Button";
 import { SectionTitle } from "@/components/ui/SectionTitle";
 
@@ -10,25 +13,36 @@ export function Localizacao() {
       <div className="mx-auto max-w-7xl px-4 md:px-6">
         <SectionTitle
           title="Pertinho de você."
-          subtitle="Seu ponto de encontro no Jardim Botânico."
+          subtitle="Duas unidades em Porto Alegre para te receber."
         />
 
-        <div className="grid gap-8 lg:grid-cols-2">
-          <div className="rounded-2xl bg-anita-cream p-6">
+        <div className="grid gap-6 lg:grid-cols-2 lg:gap-8">
+          {/* Mobile: 1 · Desktop: esq. cima */}
+          <div className="order-1 rounded-2xl bg-anita-cream p-6">
             <h3 className="font-display text-xl tracking-wide text-anita-black uppercase">
               Endereço
             </h3>
-            <p className="mt-3 text-anita-gray">
-              {business.address.street}
-              <br />
-              {business.address.neighborhood}
-              <br />
-              {business.address.city} - {business.address.state}
-              <br />
-              CEP {business.address.zip}
-            </p>
 
-            <h3 className="mt-6 font-display text-xl tracking-wide text-anita-black uppercase">
+            <div className="mt-4 grid gap-6 sm:grid-cols-2">
+              {locations.map((location) => (
+                <div key={location.id}>
+                  <p className="text-xs font-bold tracking-widest text-anita-orange uppercase">
+                    {location.label}
+                  </p>
+                  <p className="mt-2 text-sm text-anita-gray">
+                    {location.street}
+                    <br />
+                    {location.neighborhood}
+                    <br />
+                    {location.city} - {location.state}
+                    <br />
+                    CEP {location.zip}
+                  </p>
+                </div>
+              ))}
+            </div>
+
+            <h3 className="mt-8 font-display text-xl tracking-wide text-anita-black uppercase">
               Telefone
             </h3>
             <a
@@ -48,19 +62,30 @@ export function Localizacao() {
             </div>
           </div>
 
-          <div className="relative aspect-[16/10] overflow-hidden rounded-2xl lg:aspect-auto lg:min-h-full">
-            <Image
-              src={images.fachada}
-              alt="Fachada do Armazém Anita na Rua Buenos Aires"
-              fill
-              className="object-cover"
-              sizes="(max-width: 1024px) 100vw, 50vw"
+          {/* Mobile: 2 · Desktop: dir. cima */}
+          <div className="relative order-2 min-h-[280px] overflow-hidden rounded-2xl">
+            <iframe
+              title="Unidade Encantado no Google Maps"
+              src="https://maps.google.com/maps?q=Av.+Encantado,+313,+Petr%C3%B3polis,+Porto+Alegre+-+RS,+90470-420&t=&z=15&ie=UTF8&iwloc=&output=embed"
+              className="absolute inset-0 h-full w-full border-0"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
             />
           </div>
-        </div>
 
-        <div className="mt-6 grid items-stretch gap-6 lg:grid-cols-2">
-          <div className="rounded-2xl border border-dashed border-anita-gray/30 p-6">
+          {/* Mobile: 3 · Desktop: dir. baixo */}
+          <div className="relative order-3 min-h-[280px] overflow-hidden rounded-2xl lg:order-4">
+            <iframe
+              title="Unidade Jardim Botânico no Google Maps"
+              src="https://maps.google.com/maps?q=R.+Buenos+Aires,+373,+Jardim+Bot%C3%A2nico,+Porto+Alegre+-+RS&t=&z=15&ie=UTF8&iwloc=&output=embed"
+              className="absolute inset-0 h-full w-full border-0"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          </div>
+
+          {/* Mobile: 4 · Desktop: esq. baixo */}
+          <div className="order-4 rounded-2xl border border-dashed border-anita-gray/30 p-6 lg:order-3">
             <h3 className="font-display text-xl tracking-wide text-anita-black uppercase">
               Horários
             </h3>
@@ -89,16 +114,6 @@ export function Localizacao() {
             <p className="mt-3 text-xs text-anita-gray">
               * Sexta e sábado sujeitos à programação de eventos.
             </p>
-          </div>
-
-          <div className="relative h-full min-h-[280px] overflow-hidden rounded-2xl">
-            <iframe
-              title="Localização Armazém Anita no Google Maps"
-              src="https://maps.google.com/maps?q=R.+Buenos+Aires,+373,+Jardim+Bot%C3%A2nico,+Porto+Alegre+-+RS&t=&z=15&ie=UTF8&iwloc=&output=embed"
-              className="absolute inset-0 h-full w-full border-0"
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            />
           </div>
         </div>
       </div>

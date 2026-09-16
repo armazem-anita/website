@@ -1,3 +1,28 @@
+export const locations = [
+  {
+    id: "jardim-botanico",
+    label: "Unidade Jardim Botânico",
+    street: "R. Buenos Aires, 373",
+    neighborhood: "Jardim Botânico",
+    city: "Porto Alegre",
+    state: "RS",
+    zip: "90670-130",
+    mapsUrl:
+      "https://www.google.com/maps/search/?api=1&query=R.+Buenos+Aires,+373,+Jardim+Botânico,+Porto+Alegre+-+RS",
+  },
+  {
+    id: "encantado",
+    label: "Unidade Encantado",
+    street: "Av. Encantado, 313",
+    neighborhood: "Petrópolis",
+    city: "Porto Alegre",
+    state: "RS",
+    zip: "90470-420",
+    mapsUrl:
+      "https://www.google.com/maps/search/?api=1&query=Av.+Encantado,+313,+Petr%C3%B3polis,+Porto+Alegre+-+RS",
+  },
+] as const;
+
 export const business = {
   name: "Armazém Anita",
   tagline: "O primeiro armazém e bar do Brasil.",
@@ -5,11 +30,11 @@ export const business = {
   description:
     "O Armazém Anita é aquele lugar de bairro onde tem um pouco de tudo: café, comida, compras rápidas e chope gelado no Jardim Botânico.",
   address: {
-    street: "R. Buenos Aires, 373",
-    neighborhood: "Jardim Botânico",
-    city: "Porto Alegre",
-    state: "RS",
-    zip: "90670-130",
+    street: locations[0].street,
+    neighborhood: locations[0].neighborhood,
+    city: locations[0].city,
+    state: locations[0].state,
+    zip: locations[0].zip,
     full: "R. Buenos Aires, 373 — Jardim Botânico, Porto Alegre - RS",
   },
   phone: "(51) 3276-0903",
@@ -17,8 +42,7 @@ export const business = {
   googleRating: 4.5,
   googleReviews: 263,
   priceRange: "R$ 20–100 por pessoa",
-  mapsUrl:
-    "https://www.google.com/maps/search/?api=1&query=R.+Buenos+Aires,+373,+Jardim+Botânico,+Porto+Alegre+-+RS",
+  mapsUrl: locations[0].mapsUrl,
   googleReviewsUrl:
     "https://www.google.com/maps/search/?api=1&query=Armazém+Anita+Porto+Alegre",
   coordinates: { lat: -30.0589, lng: -51.1889 },
