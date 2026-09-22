@@ -71,18 +71,6 @@ export const locations: Location[] = [
     phone: "(51) 3012-0494",
     phoneLink: "tel:+555130120494",
   },
-  {
-    id: "mercado-em-breve",
-    kind: "mercado",
-    label: "Nova unidade",
-    street: "Endereço a confirmar",
-    neighborhood: "Porto Alegre",
-    city: "Porto Alegre",
-    state: "RS",
-    zip: "",
-    mapsUrl: "",
-    pending: true,
-  },
 ];
 
 export const locationTabs: { id: LocationKind; label: string }[] = [

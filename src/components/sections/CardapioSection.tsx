@@ -61,7 +61,7 @@ export function CardapioSection({
               </span>
               <input
                 type="search"
-                placeholder="Buscar café, chopp, comida..."
+                placeholder="Buscar chopp, cerveja, petisco..."
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
                 className="w-full rounded-full border border-anita-cream-dark bg-anita-cream/50 py-3 pr-4 pl-11 text-sm outline-none transition-colors focus:border-anita-orange focus:ring-2 focus:ring-anita-orange/20"

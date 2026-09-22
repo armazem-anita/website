@@ -3,6 +3,7 @@ export type MenuCategory =
   | "petiscos"
   | "churrasquinho"
   | "chopes"
+  | "cervejas"
   | "drinks";
 
 export type MenuTag =
@@ -33,6 +34,7 @@ export const menuCategories: { id: MenuCategory; label: string }[] = [
   { id: "churrasquinho", label: "Espetinhos" },
   { id: "drinks", label: "Drinks" },
   { id: "chopes", label: "Chopes" },
+  { id: "cervejas", label: "Cervejas" },
 ];
 
 export const tagLabels: Record<MenuTag, string> = {
@@ -318,7 +320,7 @@ export const menuItems: MenuItem[] = [
     description: "Chopp Brahma servido no caneco de 400 ml.",
     price: "R$ 17,00",
     category: "chopes",
-    image: menuImg("chopp-caneco-pro.jpg"),
+    image: menuImg("chopp-caneco-v5.jpg"),
     tags: ["mais-pedido", "happy-hour"],
     isReal: true,
   },
@@ -328,8 +330,32 @@ export const menuItems: MenuItem[] = [
     description: "Chopp Brahma servido na caldereta de 300 ml.",
     price: "R$ 15,00",
     category: "chopes",
-    image: menuImg("chopp-caldereta-pro.jpg"),
+    image: menuImg("chopp-caldereta-v3.jpg"),
     tags: ["happy-hour"],
+    isReal: true,
+  },
+
+  // ═══════════════════════════════════════════
+  // CERVEJAS
+  // ═══════════════════════════════════════════
+  {
+    id: "heineken-600",
+    name: "Heineken 600 ml",
+    description: "Cerveja Heineken longneck 600 ml gelada.",
+    price: "R$ 20,00",
+    category: "cervejas",
+    image: menuImg("heineken-600-pro.jpg"),
+    tags: ["novidade"],
+    isReal: true,
+  },
+  {
+    id: "original-600",
+    name: "Original 600 ml",
+    description: "Cerveja Original longneck 600 ml gelada.",
+    price: "R$ 18,00",
+    category: "cervejas",
+    image: menuImg("original-600-v2.jpg"),
+    tags: ["novidade"],
     isReal: true,
   },
 ];

@@ -8,7 +8,7 @@ import { MobileBar } from "@/components/layout/MobileBar";
 export const metadata: Metadata = {
   title: "Cardápio | Armazém Anita — Jardim Botânico, Porto Alegre",
   description:
-    "Cardápio do Armazém Anita: petiscos, espetinhos, chopes e drinks. Jardim Botânico, Porto Alegre.",
+    "Cardápio do Armazém Anita: petiscos, espetinhos, chopes, cervejas e drinks. Jardim Botânico, Porto Alegre.",
 };
 
 export default function CardapioPage() {
