@@ -1,6 +1,29 @@
-export const locations = [
+export type LocationKind = "mercado-e-bar" | "mercado";
+
+export interface Location {
+  id: string;
+  kind: LocationKind;
+  label: string;
+  street: string;
+  neighborhood: string;
+  city: string;
+  state: string;
+  zip: string;
+  mapsUrl: string;
+  mapsEmbed?: string;
+  instagram?: string;
+  instagramHandle?: string;
+  phone?: string;
+  phoneLink?: string;
+  pending?: boolean;
+}
+
+const oficialInstagram = "https://www.instagram.com/armazemanitaoficial/";
+
+export const locations: Location[] = [
   {
     id: "jardim-botanico",
+    kind: "mercado-e-bar",
     label: "Unidade Jardim Botânico",
     street: "R. Buenos Aires, 373",
     neighborhood: "Jardim Botânico",
@@ -9,9 +32,14 @@ export const locations = [
     zip: "90670-130",
     mapsUrl:
       "https://www.google.com/maps/search/?api=1&query=R.+Buenos+Aires,+373,+Jardim+Botânico,+Porto+Alegre+-+RS",
+    mapsEmbed:
+      "https://maps.google.com/maps?q=R.+Buenos+Aires,+373,+Jardim+Bot%C3%A2nico,+Porto+Alegre+-+RS&t=&z=15&ie=UTF8&iwloc=&output=embed",
+    instagram: oficialInstagram,
+    instagramHandle: "@armazemanitaoficial",
   },
   {
     id: "encantado",
+    kind: "mercado-e-bar",
     label: "Unidade Encantado",
     street: "Av. Encantado, 313",
     neighborhood: "Petrópolis",
@@ -20,8 +48,47 @@ export const locations = [
     zip: "90470-420",
     mapsUrl:
       "https://www.google.com/maps/search/?api=1&query=Av.+Encantado,+313,+Petr%C3%B3polis,+Porto+Alegre+-+RS",
+    mapsEmbed:
+      "https://maps.google.com/maps?q=Av.+Encantado,+313,+Petr%C3%B3polis,+Porto+Alegre+-+RS,+90470-420&t=&z=15&ie=UTF8&iwloc=&output=embed",
+    instagram: oficialInstagram,
+    instagramHandle: "@armazemanitaoficial",
   },
-] as const;
+  {
+    id: "ferreira-viana",
+    kind: "mercado",
+    label: "Unidade Ferreira Viana",
+    street: "R. Ferreira Viana, 380",
+    neighborhood: "Petrópolis",
+    city: "Porto Alegre",
+    state: "RS",
+    zip: "90670-100",
+    mapsUrl:
+      "https://www.google.com/maps/search/?api=1&query=R.+Ferreira+Viana,+380,+Petr%C3%B3polis,+Porto+Alegre+-+RS",
+    mapsEmbed:
+      "https://maps.google.com/maps?q=R.+Ferreira+Viana,+380,+Petr%C3%B3polis,+Porto+Alegre+-+RS,+90670-100&t=&z=15&ie=UTF8&iwloc=&output=embed",
+    instagram: "https://www.instagram.com/armazemanitaferreiraviana/",
+    instagramHandle: "@armazemanitaferreiraviana",
+    phone: "(51) 3012-0494",
+    phoneLink: "tel:+555130120494",
+  },
+  {
+    id: "mercado-em-breve",
+    kind: "mercado",
+    label: "Nova unidade",
+    street: "Endereço a confirmar",
+    neighborhood: "Porto Alegre",
+    city: "Porto Alegre",
+    state: "RS",
+    zip: "",
+    mapsUrl: "",
+    pending: true,
+  },
+];
+
+export const locationTabs: { id: LocationKind; label: string }[] = [
+  { id: "mercado-e-bar", label: "Mercado e Bar" },
+  { id: "mercado", label: "Mercado" },
+];
 
 export const business = {
   name: "Armazém Anita",
