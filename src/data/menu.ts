@@ -216,7 +216,7 @@ export const menuItems: MenuItem[] = [
     description: "Espetinho na brasa — pão de alho.",
     price: "R$ 12,00",
     category: "churrasquinho",
-    image: menuImg("espetinho-pao-alho.jpg"),
+    image: menuImg("espetinho-pao-alho-v2.jpg"),
     isReal: true,
   },
   {
