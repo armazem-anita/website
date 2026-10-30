@@ -139,27 +139,6 @@ export const menuItems: MenuItem[] = [
     tags: ["novidade", "para-compartilhar"],
     isReal: true,
   },
-  {
-    id: "raviolloni-linguicinha",
-    name: "Raviolloni Linguicinha, Minas e Orégano",
-    description:
-      "Raviolloni frito recheado com linguicinha, queijo minas e orégano. Porção de 500 g.",
-    price: "R$ 59,90",
-    category: "petiscos",
-    image: menuImg("raviolloni-linguicinha-pro.jpg"),
-    tags: ["novidade", "para-compartilhar"],
-    isReal: true,
-  },
-  {
-    id: "raviolloni-4-queijos",
-    name: "Raviolloni de 4 Queijos",
-    description: "Raviolloni frito recheado com quatro queijos. Porção de 500 g.",
-    price: "R$ 59,90",
-    category: "petiscos",
-    image: menuImg("raviolloni-4queijos-pro.jpg"),
-    tags: ["novidade", "para-compartilhar"],
-    isReal: true,
-  },
 
   // ═══════════════════════════════════════════
   // ESPETINHOS — PDF oficial
