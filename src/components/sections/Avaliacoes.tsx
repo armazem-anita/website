@@ -2,6 +2,12 @@ import { business, reviewThemes } from "@/data/business";
 import { Button } from "@/components/ui/Button";
 import { SectionTitle } from "@/components/ui/SectionTitle";
 
+const reviews = [
+  "O ambiente preferido no Jardim Botânico; chopp gelado, petiscos deliciosos.",
+  "Ampla variedade de produtos, boas marcas e preços justos.",
+  "É um espaço bem diferente, mistura de bar, padaria, mercadinho.",
+];
+
 export function Avaliacoes() {
   return (
     <section id="avaliacoes" className="bg-anita-black py-20 text-white md:py-28">
@@ -43,20 +49,18 @@ export function Avaliacoes() {
         </div>
 
         <div className="grid gap-4 md:grid-cols-3">
-          {[1, 2, 3].map((n) => (
+          {reviews.map((review) => (
             <div
-              key={n}
-              className="rounded-2xl border border-dashed border-white/20 bg-white/5 p-6"
+              key={review}
+              className="rounded-2xl border border-white/10 bg-white/5 p-6"
             >
               <div className="mb-3 flex gap-0.5 text-anita-orange text-sm">
                 {Array.from({ length: 5 }).map((_, i) => (
                   <span key={i}>★</span>
                 ))}
               </div>
-              <p className="text-sm text-white/50 italic">
-                Confira as avaliações reais no Google — tema #{n}.
-              </p>
-              <p className="mt-4 text-xs text-white/30">— Cliente Google</p>
+              <p className="text-sm text-white/70 italic">“{review}”</p>
+              <p className="mt-4 text-xs text-white/40">— Cliente Google</p>
             </div>
           ))}
         </div>
